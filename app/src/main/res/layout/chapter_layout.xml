@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:orientation="horizontal"
+        android:background="?selectableItemBackground">
+        <ImageView
+            android:id="@+id/share_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingTop="3.5dp"
+            android:paddingBottom="3.5dp"
+            android:src="@drawable/share"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/colorBlack"
+            android:text="وَمَا خَلَقْتُ الْجِنَّ وَالْاِنْسَ اِلَّا لِيَعْبُدُوْنِ "
+            android:fontFamily="@font/tajawal_regular"
+            android:layout_marginRight="25dp"
+            android:lineSpacingExtra="12dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/chapter_no_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="١"
+            android:fontFamily="@font/tajawal_medium"
+            android:textColor="@color/colorGreen"
+            android:textSize="18sp"
+            android:layout_weight="0"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/content_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</LinearLayout>
