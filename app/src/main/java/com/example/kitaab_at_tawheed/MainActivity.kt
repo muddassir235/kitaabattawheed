@@ -38,12 +38,12 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity: scrollY", scrollY.toString())
                 val headerScroll = 400
                 if(scrollY < headerScroll) {
-                    val height = (50 + 15.toFloat() * ((headerScroll - scrollY)/headerScroll)).toInt().px
+                    val height = (50 + 25.toFloat() * ((headerScroll - scrollY)/headerScroll)).toInt().px
                     val layoutparams = title_layout.layoutParams
                     layoutparams.height = height
                     title_layout.layoutParams = layoutparams
 
-                    recyclerView.elevation = (12.px * (headerScroll - scrollY)/headerScroll).toFloat()
+                    recyclerView.elevation = 1.px.toFloat() + (9.px * (headerScroll - scrollY)/headerScroll)
                     title_back.alpha       = ((headerScroll - scrollY)/headerScroll).toFloat()
                     title_tv.textSize      = 20.toFloat() + 10.toFloat() * ((headerScroll - scrollY)/headerScroll)
                     title_tv.typeface      = ResourcesCompat.getFont(applicationContext,
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                     layoutparams.height = height
                     title_layout.layoutParams = layoutparams
 
-                    recyclerView.elevation = 0f
+                    recyclerView.elevation = 1.px.toFloat()
                     title_back.alpha  = 0f
                     title_tv.textSize = 20.toFloat()
                 }

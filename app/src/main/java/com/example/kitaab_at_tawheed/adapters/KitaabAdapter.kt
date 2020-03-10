@@ -15,12 +15,19 @@ import com.example.kitaab_at_tawheed.utils.PatternEditableBuilder
 import java.util.regex.Pattern
 
 class KitaabAdapter(private val dataSet: Array<Chapter>) :
-    RecyclerView.Adapter<KitaabAdapter.ChapterHolder>() {
+    RecyclerView.Adapter<KitaabAdapter.BaseViewHolder<Chapter>>() {
+    companion object {
+        private const val TYPE_CHAPTER = 0
+        private const val TYPE_END = 1
+    }
 
     var contentsVisiblityArray: Array<Boolean>? = Array(65) { false }
 
-    inner class ChapterHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(inflater.inflate(
-        R.layout.chapter_layout, parent, false)) {
+    abstract class BaseViewHolder<T>(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        abstract fun bind(item: T)
+    }
+
+    inner class ChapterHolder(itemView: View) : BaseViewHolder<Chapter> (itemView) {
         private var title_ll     : LinearLayout?  = null
         private var chapter_no_tv: TextView?      = null
         private var title_tv     : TextView?      = null
@@ -34,7 +41,7 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
             share_iv      = itemView.findViewById(R.id.share_iv)
         }
 
-        fun bind(chapter: Chapter) {
+        override fun bind(chapter: Chapter) {
             title_ll?.setOnClickListener {
                 contentsVisiblityArray?.set(adapterPosition,
                     !(contentsVisiblityArray?.get(adapterPosition)?:false))
@@ -64,22 +71,51 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
         }
     }
 
-
-    // Create new views (invoked by the layout manager)
-    override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): KitaabAdapter.ChapterHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        return ChapterHolder(inflater, parent)
+    inner class EndHolder(itemView: View) : BaseViewHolder<Chapter>(itemView){
+        override fun bind(chapter: Chapter) {
+            // Nothing
+        }
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
-    override fun onBindViewHolder(holder: ChapterHolder, position: Int) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        val chapter: Chapter = dataSet[position]
-        holder.bind(chapter)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Chapter> {
+        return when (viewType) {
+            TYPE_CHAPTER -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.chapter_layout, parent, false)
+                ChapterHolder(view)
+            }
+            TYPE_END -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.end_row, parent, false)
+                EndHolder(view)
+            }
+            else -> throw IllegalArgumentException("Invalid view type")
+        }
     }
+
+    override fun getItemViewType(position: Int): Int {
+        if(position == dataSet.size) {
+            return TYPE_END
+        } else {
+            return TYPE_CHAPTER
+        }
+    }
+
+//    // Replace the contents of a view (invoked by the layout manager)
+//    override fun onBindViewHolder(holder: ChapterHolder, position: Int) {
+//        // - get element from your dataset at this position
+//        // - replace the contents of the view with that element
+//        val chapter: Chapter = dataSet[position]
+//        holder.bind(chapter)
+//    }
 
     // Return the size of your dataset (invoked by the layout manager)
-    override fun getItemCount() = dataSet.size
+    override fun getItemCount() = dataSet.size+1
+
+    override fun onBindViewHolder(holder: BaseViewHolder<Chapter>, position: Int) {
+        if(holder is ChapterHolder) {
+            val chapter: Chapter = dataSet[position]
+            holder.bind(chapter)
+        }
+    }
 }
