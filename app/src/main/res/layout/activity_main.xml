@@ -12,12 +12,13 @@
     <FrameLayout
         android:id="@+id/title_layout"
         android:layout_width="match_parent"
-        android:layout_height="75dp">
+        android:layout_height="70dp">
         <FrameLayout
             android:id="@+id/title_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
+            android:backgroundTint="#00A"
             android:background="@drawable/pattern"/>
         <TextView
             android:id="@+id/title_tv"
@@ -27,7 +28,7 @@
             android:text="كتاب التوحيد"
             android:paddingLeft="25dp"
             android:paddingRight="25dp"
-            android:fontFamily="@font/tajawal_medium"
+            android:fontFamily="@font/tajawal_regular"
             android:textSize="30sp"
             android:textColor="@color/colorBlack"
             />

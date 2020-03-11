@@ -10,6 +10,6 @@ class LaunchActivity : AppCompatActivity() {
         setContentView(R.layout.activity_launch)
 
         startActivityNoAnimation<MainActivity>();
-        finish()
+//        finish()
     }
 }
