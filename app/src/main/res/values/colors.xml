@@ -6,7 +6,12 @@
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorGreen">#4E9100</color>
-    <color name="colorBlue">#2B6BDF</color>
+    <color name="colorText">#BC000000</color>
+    <color name="colorGreen">#009A33</color>
+    <color name="colorThemeGreen">#4E9100</color>
+    <color name="colorThemeLightGreen">#83559E01</color>
+    <color name="colorBlue">#004AD1</color>
+    <color name="colorRed">#F44336</color>
     <color name="colorGrey">#9B9B9B</color>
+    <color name="colorLightGrey">#DDDDDD</color>
 </resources>

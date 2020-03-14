@@ -35,9 +35,10 @@
             android:layout_marginRight="25dp"
             android:lineSpacingExtra="12dp"
             android:focusable="false"
+            android:justificationMode="inter_word"
             android:enabled="false"
             android:clickable="false"
-            android:textSize="18sp"/>
+            android:textSize="17sp"/>
         <TextView
             android:id="@+id/chapter_no_tv"
             android:layout_width="wrap_content"
@@ -45,7 +46,7 @@
             android:layout_gravity="right"
             android:text="١"
             android:fontFamily="@font/tajawal_medium"
-            android:textColor="@color/colorGreen"
+            android:textColor="@color/colorThemeGreen"
             android:textSize="18sp"
             android:focusable="false"
             android:enabled="false"

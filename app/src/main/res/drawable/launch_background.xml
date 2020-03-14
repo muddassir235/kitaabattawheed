@@ -3,8 +3,14 @@
 
     <item
         android:drawable="@color/colorWhite"/>
+    <item
+        android:drawable="@drawable/pattern_1"/>
 
     <item
         android:gravity="center"
-        android:drawable="@drawable/splash"/>
+        android:drawable="@drawable/logo"/>
+    <item
+        android:gravity="bottom|center"
+        android:drawable="@drawable/author"
+        android:bottom="120dp"/>
 </layer-list>

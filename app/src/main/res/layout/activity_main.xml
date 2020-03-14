@@ -12,13 +12,12 @@
     <FrameLayout
         android:id="@+id/title_layout"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="77dp">
         <FrameLayout
             android:id="@+id/title_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="1dp"
-            android:backgroundTint="#00A"
+            android:layout_marginTop="3dp"
             android:background="@drawable/pattern"/>
         <TextView
             android:id="@+id/title_tv"
@@ -51,7 +50,9 @@
         android:background="@color/colorWhite"
         android:elevation="10dp"
         android:paddingTop="10dp"
+        android:scrollbarSize="3dp"
+        android:descendantFocusability="blocksDescendants"
         android:clipToPadding="false"
-        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:scrollbarThumbVertical="@color/colorLightGrey"
         android:layout_weight="1"/>
 </LinearLayout>

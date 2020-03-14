@@ -169,7 +169,7 @@ class PatternEditableBuilder {
         val styles: SpannableStyleListener = object : SpannableStyleListener(textColor, textFont) {
             override fun onSpanStyled(ds: TextPaint?) {
                 ds?.linkColor = textView?.resources?.getColor(spanTextColor)
-                ds?.setTypeface(ResourcesCompat.getFont(textView?.context!!, spanFont))
+//                ds?.setTypeface(ResourcesCompat.getFont(textView?.context!!, spanFont))
             }
         }
         addPattern(pattern, styles, listener)

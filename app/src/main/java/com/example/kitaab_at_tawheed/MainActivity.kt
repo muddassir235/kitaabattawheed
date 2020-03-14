@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity: scrollY", scrollY.toString())
                 val headerScroll = 400
                 if(scrollY < headerScroll) {
-                    val height = (50 + 20.toFloat() * ((headerScroll - scrollY)/headerScroll)).toInt().px
+                    val height = (50 + 27.toFloat() * ((headerScroll - scrollY)/headerScroll)).toInt().px
                     val layoutparams = title_layout.layoutParams
                     layoutparams.height = height
                     title_layout.layoutParams = layoutparams
