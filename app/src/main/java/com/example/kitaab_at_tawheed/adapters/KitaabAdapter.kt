@@ -1,5 +1,6 @@
 package com.example.kitaab_at_tawheed.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -61,10 +62,32 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
 
                 content_rv?.visibility = View.VISIBLE
                 title_tv?.typeface = ResourcesCompat.getFont(itemView.context, R.font.tajawal_medium)
+                share_iv?.visibility = View.VISIBLE
             } else {
                 content_rv?.visibility = View.GONE
                 title_tv?.typeface = ResourcesCompat.getFont(itemView.context,
                     R.font.tajawal_regular)
+                share_iv?.visibility = View.GONE
+            }
+
+            share_iv?.setOnClickListener {
+                var text = ""
+                text = text +
+                        "كتاب التوحيد الذي هو حق الله على العبيد صنفه الشيخ محمد بن عبد الوهاب رحمه الله" + "\n\n" +
+                        chapter.chapter_no + " " + chapter.title + "\n"
+
+                for(row in chapter.content!!) {
+                    text = text + "\n" + row
+                }
+
+                val sendIntent: Intent = Intent().apply {
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT, text)
+                    type = "text/plain"
+                }
+
+                val shareIntent = Intent.createChooser(sendIntent, null)
+                itemView.context.startActivity(shareIntent)
             }
         }
     }
@@ -107,5 +130,10 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
             val chapter: Chapter = dataSet[position]
             holder.bind(chapter)
         }
+    }
+
+    fun resetRows() {
+        contentsVisiblityArray = Array(65) {false}
+        notifyDataSetChanged()
     }
 }

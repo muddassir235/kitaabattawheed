@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var viewAdapter: KitaabAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +59,11 @@ class MainActivity : AppCompatActivity() {
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
+
+        title_layout.setOnClickListener {
+            viewAdapter.resetRows()
+            recyclerView.smoothScrollToPosition(0)
+        }
     }
 
     fun loadDataSet() : Array<Chapter> {
