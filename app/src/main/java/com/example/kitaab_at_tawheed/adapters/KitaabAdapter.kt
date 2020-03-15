@@ -99,14 +99,6 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
         }
     }
 
-//    // Replace the contents of a view (invoked by the layout manager)
-//    override fun onBindViewHolder(holder: ChapterHolder, position: Int) {
-//        // - get element from your dataset at this position
-//        // - replace the contents of the view with that element
-//        val chapter: Chapter = dataSet[position]
-//        holder.bind(chapter)
-//    }
-
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size+1
 

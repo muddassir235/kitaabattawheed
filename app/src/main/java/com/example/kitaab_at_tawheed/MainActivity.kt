@@ -59,21 +59,6 @@ class MainActivity : AppCompatActivity() {
                 super.onScrolled(recyclerView, dx, dy)
             }
         })
-
-//        recyclerView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-//            Log.d("MainActivity: scrollY", scrollY.toString())
-//            if(scrollY < 50) {
-//                recyclerView.elevation = (12.px * (50 - scrollY)/50).toFloat()
-//                title_back.alpha       = (0.05 * (50 - scrollY)/50).toFloat()
-//                title_tv.textSize      = 20.toFloat() + 5.toFloat() * ((50 - scrollY)/50)
-//                title_tv.typeface      = ResourcesCompat.getFont(this, R.font.tajawal_medium)
-//            } else {
-//                recyclerView.elevation = 0f
-//                title_back.alpha  = 0f
-//                title_tv.textSize = 20.toFloat()
-//                title_tv.typeface = ResourcesCompat.getFont(this, R.font.tajawal_regular)
-//            }
-//        }
     }
 
     fun loadDataSet() : Array<Chapter> {
