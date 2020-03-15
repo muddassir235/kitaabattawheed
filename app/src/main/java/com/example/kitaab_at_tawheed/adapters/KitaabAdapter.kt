@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kitaab_at_tawheed.Chapter
 import com.example.kitaab_at_tawheed.R
-import com.example.kitaab_at_tawheed.utils.PatternEditableBuilder
-import java.util.regex.Pattern
 
 class KitaabAdapter(private val dataSet: Array<Chapter>) :
     RecyclerView.Adapter<KitaabAdapter.BaseViewHolder<Chapter>>() {

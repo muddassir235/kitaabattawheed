@@ -1,6 +1,5 @@
 package com.example.kitaab_at_tawheed.adapters
 
-import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kitaab_at_tawheed.R
-import com.example.kitaab_at_tawheed.utils.PatternEditableBuilder
 import java.util.regex.Pattern
 
 
@@ -24,8 +22,6 @@ class ContentAdapter(private val dataSet: Array<String>) :
         }
 
         fun bind(row: String) {
-//            row_tv?.text = row
-
             var patterns = arrayOf(
                 Pattern.compile("«([^/»(*)«/]*)»"),
                 Pattern.compile("﴿([^/﴾(*)﴿/]*)﴾"),
@@ -47,38 +43,6 @@ class ContentAdapter(private val dataSet: Array<String>) :
             )
 
             row_tv?.text = buildText(row_tv!!, row, patterns = patterns, colors = colors)
-
-//            PatternEditableBuilder()
-//                .addPattern(
-//                    Pattern.compile("•"),
-//                    R.color.colorBlack,
-//                    R.font.tajawal_regular
-//                )
-//                .addPattern(
-//                    Pattern.compile("«([^/»(*)«/]*)»"),
-//                    R.color.colorGreen,
-//                    R.font.tajawal_regular
-//                )
-//                .addPattern(
-//                    Pattern.compile("﴿([^/﴾(*)﴿/]*)﴾"),
-//                    R.color.colorBlue,
-//                    R.font.tajawal_regular
-//                )
-//                .addPattern(
-//                    Pattern.compile("رضي الله عنه"),
-//                    R.color.colorGrey,
-//                    R.font.tajawal_regular
-//                )
-//                .addPattern(
-//                    Pattern.compile("رضي الله عنها"),
-//                    R.color.colorGrey,
-//                    R.font.tajawal_regular
-//                )
-//                .addPattern(
-//                    Pattern.compile("رضي الله عنهما"),
-//                    R.color.colorGrey,
-//                    R.font.tajawal_regular
-//                ).put(row).into(row_tv!!)
         }
 
         fun buildText(textView: TextView, editable: CharSequence, patterns: Array<Pattern>, colors: Array<Int>):
