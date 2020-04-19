@@ -1,9 +1,9 @@
-package com.example.kitaab_at_tawheed
+package com.app.kitaabattawheed
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.kitaab_at_tawheed.utils.startActivityNoAnimation
+import com.app.kitaabattawheed.utils.startActivityNoAnimation
 
 class LaunchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

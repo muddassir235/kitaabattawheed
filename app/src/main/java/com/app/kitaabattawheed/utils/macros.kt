@@ -1,4 +1,4 @@
-package com.example.kitaab_at_tawheed.utils
+package com.app.kitaabattawheed.utils
 
 import android.app.Activity
 import android.content.Context

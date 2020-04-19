@@ -1,4 +1,4 @@
-package com.example.kitaab_at_tawheed.adapters
+package com.app.kitaabattawheed.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kitaab_at_tawheed.Chapter
-import com.example.kitaab_at_tawheed.R
+import com.app.kitaabattawheed.Chapter
+import com.app.kitaabattawheed.R
 
 class KitaabAdapter(private val dataSet: Array<Chapter>) :
     RecyclerView.Adapter<KitaabAdapter.BaseViewHolder<Chapter>>() {

@@ -1,4 +1,4 @@
-package com.example.kitaab_at_tawheed
+package com.app.kitaabattawheed
 
 data class Chapter(val chapter_no: String = "",
                    val title     : String = "",
