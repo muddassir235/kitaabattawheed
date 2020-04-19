@@ -1,4 +1,4 @@
-package com.example.kitaab_at_tawheed
+package com.app.kitaabattawheed
 
 import org.junit.Test
 

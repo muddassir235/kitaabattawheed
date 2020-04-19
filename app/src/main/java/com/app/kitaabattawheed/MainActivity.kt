@@ -1,14 +1,12 @@
-package com.example.kitaab_at_tawheed
+package com.app.kitaabattawheed
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.FrameLayout
-import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kitaab_at_tawheed.adapters.KitaabAdapter
-import com.example.kitaab_at_tawheed.utils.px
+import com.app.kitaabattawheed.adapters.KitaabAdapter
+import com.app.kitaabattawheed.utils.px
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

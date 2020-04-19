@@ -1,4 +1,4 @@
-package com.example.kitaab_at_tawheed.adapters
+package com.app.kitaabattawheed.adapters
 
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kitaab_at_tawheed.R
+import com.app.kitaabattawheed.R
 import java.util.regex.Pattern
 
 
