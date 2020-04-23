@@ -36,14 +36,22 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity: scrollY", scrollY.toString())
                 val headerScroll = 400
                 if(scrollY < headerScroll) {
-                    val height = (50 + 27.toFloat() * ((headerScroll - scrollY)/headerScroll)).toInt().px
+                    var scaleFactor = (headerScroll.toFloat() - scrollY.toFloat())/headerScroll.toFloat()
+
+                    if(scaleFactor>1) {
+                        scaleFactor = 1.0f
+                    } else if (scaleFactor < 0) {
+                        scaleFactor = 0.0f
+                    }
+
+                    val height = (50 + 27 * scaleFactor).toInt().px
                     val layoutparams = title_layout.layoutParams
                     layoutparams.height = height
                     title_layout.layoutParams = layoutparams
 
-                    recyclerView.elevation = 2.px.toFloat() + (8.px * (headerScroll - scrollY)/headerScroll)
-                    title_back.alpha       = 0.25f + 0.75f*((headerScroll - scrollY)/headerScroll).toFloat()
-                    title_tv.textSize      = 20.toFloat() + 10.toFloat() * ((headerScroll - scrollY)/headerScroll)
+                    recyclerView.elevation = 2.px.toFloat() + (8.px * scaleFactor)
+                    title_back.alpha       = 0.25f + 0.75f * scaleFactor
+                    title_tv.textSize      = 20.0f + 10 * scaleFactor
                 } else {
                     val height = 50.px
                     val layoutparams = title_layout.layoutParams
@@ -52,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
                     recyclerView.elevation = 2.px.toFloat()
                     title_back.alpha  = 0.25f
-                    title_tv.textSize = 20.toFloat()
+                    title_tv.textSize = 20.0f
                 }
                 super.onScrolled(recyclerView, dx, dy)
             }
