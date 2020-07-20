@@ -3,12 +3,10 @@
 
     <item
         android:drawable="@color/colorWhite"/>
-    <item
-        android:drawable="@drawable/pattern_1"/>
 
     <item
         android:gravity="center"
-        android:drawable="@drawable/logo"/>
+        android:drawable="@drawable/ic_launch"/>
     <item
         android:gravity="bottom|center"
         android:drawable="@drawable/author"
