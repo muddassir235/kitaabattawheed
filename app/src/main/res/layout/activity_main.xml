@@ -27,7 +27,7 @@
             android:text="كتاب التوحيد"
             android:paddingLeft="25dp"
             android:paddingRight="25dp"
-            android:fontFamily="@font/tajawal_regular"
+            android:fontFamily="@font/tajawal_medium"
             android:textSize="30sp"
             android:textColor="@color/colorBlack"
             />

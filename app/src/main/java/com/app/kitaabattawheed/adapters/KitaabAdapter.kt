@@ -61,12 +61,12 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
                 }
 
                 content_rv?.visibility = View.VISIBLE
-                title_tv?.typeface = ResourcesCompat.getFont(itemView.context, R.font.tajawal_medium)
+                title_tv?.typeface = ResourcesCompat.getFont(itemView.context, R.font.tajawal_bold)
                 share_iv?.visibility = View.VISIBLE
             } else {
                 content_rv?.visibility = View.GONE
                 title_tv?.typeface = ResourcesCompat.getFont(itemView.context,
-                    R.font.tajawal_regular)
+                    R.font.tajawal_medium)
                 share_iv?.visibility = View.GONE
             }
 
