@@ -3,4 +3,4 @@
     android:src="@drawable/pattern_block_2"
     android:tint="#000"
     android:tileMode="repeat"
-    android:alpha="0.2"/>
+    android:alpha="0.15"/>

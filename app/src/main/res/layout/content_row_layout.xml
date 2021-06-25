@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="right"
     android:textColor="@color/colorText"
-    android:fontFamily="@font/tajawal_regular"
+    android:fontFamily="@font/tajawal_medium"
     android:lineSpacingExtra="17dp"
     android:paddingTop="12dp"
     android:paddingBottom="12dp"

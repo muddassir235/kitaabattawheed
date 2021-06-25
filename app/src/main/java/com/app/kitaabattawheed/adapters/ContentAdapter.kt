@@ -39,7 +39,7 @@ class ContentAdapter(private val dataSet: Array<String>) :
                 itemView.resources.getColor(R.color.colorGrey),
                 itemView.resources.getColor(R.color.colorGrey),
                 itemView.resources.getColor(R.color.colorGrey),
-                itemView.resources.getColor(R.color.colorLightGrey)
+                itemView.resources.getColor(R.color.colorThemeLightGreen)
             )
 
             row_tv?.text = buildText(row_tv!!, row, patterns = patterns, colors = colors)
