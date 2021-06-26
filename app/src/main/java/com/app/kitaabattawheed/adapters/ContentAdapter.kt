@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.kitaabattawheed.R
+import com.app.kitaabattawheed.attrColor
 import java.util.regex.Pattern
 
 
@@ -39,7 +40,7 @@ class ContentAdapter(private val dataSet: Array<String>) :
                 itemView.resources.getColor(R.color.colorGrey),
                 itemView.resources.getColor(R.color.colorGrey),
                 itemView.resources.getColor(R.color.colorGrey),
-                itemView.resources.getColor(R.color.colorThemeLightGreen)
+                itemView.context.attrColor(R.attr.colorSecondaryVariant)
             )
 
             row_tv?.text = buildText(row_tv!!, row, patterns = patterns, colors = colors)

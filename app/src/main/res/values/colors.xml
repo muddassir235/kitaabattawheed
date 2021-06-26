@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#000000</color>
+    <color name="colorPrimaryVariant">#000000</color>
+    <color name="colorSecondary">@color/colorThemeGreen</color>
+    <color name="colorSecondaryVariant">@color/colorThemeLightGreen</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorPrimarySurface">#FFFFFF</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnSurface">#000000</color>
+    <color name="colorOnPrimarySurface">#000000</color>
+
+    <color name="colorPrimaryNight">#FFFFFF</color>
+    <color name="colorPrimaryVariantNight">#FFFFFF</color>
+    <color name="colorSecondaryNight">@color/colorThemeLightGreen</color>
+    <color name="colorSecondaryVariantNight">@color/colorThemeGreen</color>
+    <color name="colorSurfaceNight">#000029</color>
+    <color name="colorPrimarySurfaceNight">#000029</color>
+    <color name="colorOnPrimaryNight">#000000</color>
+    <color name="colorOnSecondaryNight">#000000</color>
+    <color name="colorOnSurfaceNight">#FFFFFF</color>
+    <color name="colorOnPrimarySurfaceNight">#FFFFFF</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorText">#BC000000</color>
     <color name="colorGreen">#009A33</color>
     <color name="colorThemeGreen">#4E9100</color>
-    <color name="colorThemeLightGreen">#83559E01</color>
+    <color name="colorThemeLightGreen">#9BCE66</color>
     <color name="colorBlue">#004AD1</color>
     <color name="colorRed">#F44336</color>
     <color name="colorGrey">#9B9B9B</color>
