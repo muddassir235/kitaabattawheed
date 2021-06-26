@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariantNight</item>
+        <item name="colorSecondary">@color/colorSecondaryNight</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariantNight</item>
+        <item name="colorSurface">@color/colorSurfaceNight</item>
+        <item name="colorPrimarySurface">@color/colorPrimarySurfaceNight</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryNight</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryNight</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceNight</item>
+        <item name="colorOnPrimarySurface">@color/colorOnPrimarySurfaceNight</item>
+
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:statusBarColor">@color/colorSurfaceNight</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/colorSurfaceNight</item>
+    </style>
+
+</resources>

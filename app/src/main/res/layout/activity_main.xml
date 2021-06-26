@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="?attr/colorPrimarySurface"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -29,14 +29,14 @@
             android:paddingRight="25dp"
             android:fontFamily="@font/tajawal_medium"
             android:textSize="30sp"
-            android:textColor="@color/colorBlack"
+            android:textColor="?attr/colorPrimary"
             />
 
         <ImageButton
             android:id="@+id/expand_collapse_ib"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
+            android:background="?attr/colorPrimarySurface"
             android:layout_gravity="center_vertical"
             android:visibility="gone"
             android:src="@drawable/ic_collapse"/>
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="vertical"
-        android:background="@color/colorWhite"
+        android:background="?attr/colorPrimarySurface"
         android:elevation="10dp"
         android:paddingTop="10dp"
         android:scrollbarSize="3dp"

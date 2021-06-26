@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/colorWhite">
+    android:background="?attr/colorPrimarySurface">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:textColor="@color/colorBlack"
+                android:textColor="?attr/colorPrimary"
                 android:text="وَمَا خَلَقْتُ الْجِنَّ وَالْاِنْسَ اِلَّا لِيَعْبُدُوْنِ "
                 android:fontFamily="@font/tajawal_medium"
                 android:layout_marginRight="25dp"
@@ -54,7 +54,7 @@
             android:layout_gravity="right"
             android:text="١"
             android:fontFamily="@font/tajawal_bold"
-            android:textColor="@color/colorThemeGreen"
+            android:textColor="?attr/colorSecondary"
             android:textSize="18sp"
             android:focusable="false"
             android:enabled="false"
@@ -66,6 +66,6 @@
         android:id="@+id/content_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
+        android:background="?attr/colorPrimarySurface"
         android:visibility="gone"/>
 </LinearLayout>
