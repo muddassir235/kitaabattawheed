@@ -7,6 +7,7 @@
         <item name="colorPrimaryVariant">@color/colorPrimaryVariantNight</item>
         <item name="colorSecondary">@color/colorSecondaryNight</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryVariantNight</item>
+        <item name="colorAccent">@color/colorAccentNight</item>
         <item name="colorSurface">@color/colorSurfaceNight</item>
         <item name="colorPrimarySurface">@color/colorPrimarySurfaceNight</item>
         <item name="colorOnPrimary">@color/colorOnPrimaryNight</item>

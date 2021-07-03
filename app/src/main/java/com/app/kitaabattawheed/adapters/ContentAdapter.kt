@@ -35,7 +35,7 @@ class ContentAdapter(private val dataSet: Array<String>) :
 
             var colors = arrayOf(
                 itemView.resources.getColor(R.color.colorGreen),
-                itemView.resources.getColor(R.color.colorBlue),
+                itemView.context.attrColor(R.attr.colorAccent),
                 itemView.resources.getColor(R.color.colorGrey),
                 itemView.resources.getColor(R.color.colorGrey),
                 itemView.resources.getColor(R.color.colorGrey),
