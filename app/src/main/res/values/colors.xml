@@ -4,6 +4,7 @@
     <color name="colorPrimaryVariant">#000000</color>
     <color name="colorSecondary">@color/colorThemeGreen</color>
     <color name="colorSecondaryVariant">@color/colorThemeLightGreen</color>
+    <color name="colorAccent">#004AD1</color>
     <color name="colorSurface">#FFFFFF</color>
     <color name="colorPrimarySurface">#FFFFFF</color>
     <color name="colorOnPrimary">#FFFFFF</color>
@@ -15,10 +16,11 @@
     <color name="colorPrimaryVariantNight">#FFFFFF</color>
     <color name="colorSecondaryNight">@color/colorThemeLightGreen</color>
     <color name="colorSecondaryVariantNight">@color/colorThemeGreen</color>
-    <color name="colorSurfaceNight">#2A3439</color>
-    <color name="colorPrimarySurfaceNight">#2A3439</color>
-    <color name="colorOnPrimaryNight">#2A3439</color>
-    <color name="colorOnSecondaryNight">#2A3439</color>
+    <color name="colorAccentNight">#4C8AFB</color>
+    <color name="colorSurfaceNight">#252A2C</color>
+    <color name="colorPrimarySurfaceNight">#252A2C</color>
+    <color name="colorOnPrimaryNight">#252A2C</color>
+    <color name="colorOnSecondaryNight">#252A2C</color>
     <color name="colorOnSurfaceNight">#FFFFFF</color>
     <color name="colorOnPrimarySurfaceNight">#FFFFFF</color>
 
