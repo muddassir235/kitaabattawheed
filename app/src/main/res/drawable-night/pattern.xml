@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/pattern_block_4"
+    android:src="@drawable/pattern_block_2"
+    android:tint="#FFF"
     android:tileMode="repeat"
-    android:alpha="0.2"/>
+    android:alpha="0.15"/>

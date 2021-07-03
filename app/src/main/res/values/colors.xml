@@ -15,10 +15,10 @@
     <color name="colorPrimaryVariantNight">#FFFFFF</color>
     <color name="colorSecondaryNight">@color/colorThemeLightGreen</color>
     <color name="colorSecondaryVariantNight">@color/colorThemeGreen</color>
-    <color name="colorSurfaceNight">#000029</color>
-    <color name="colorPrimarySurfaceNight">#000029</color>
-    <color name="colorOnPrimaryNight">#000000</color>
-    <color name="colorOnSecondaryNight">#000000</color>
+    <color name="colorSurfaceNight">#2A3439</color>
+    <color name="colorPrimarySurfaceNight">#2A3439</color>
+    <color name="colorOnPrimaryNight">#2A3439</color>
+    <color name="colorOnSecondaryNight">#2A3439</color>
     <color name="colorOnSurfaceNight">#FFFFFF</color>
     <color name="colorOnPrimarySurfaceNight">#FFFFFF</color>
 
