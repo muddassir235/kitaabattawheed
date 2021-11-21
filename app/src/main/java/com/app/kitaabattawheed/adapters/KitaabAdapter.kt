@@ -20,7 +20,7 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
         private const val TYPE_END = 1
     }
 
-    var contentsVisiblityArray: Array<Boolean>? = Array(65) { false }
+    var contentsVisiblityArray: Array<Boolean>? = Array(dataSet.size) { false }
 
     abstract class BaseViewHolder<T>(itemView: View) : RecyclerView.ViewHolder(itemView) {
         abstract fun bind(item: T)
@@ -42,14 +42,14 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
 
         override fun bind(chapter: Chapter) {
             title_ll?.setOnClickListener {
-                contentsVisiblityArray?.set(adapterPosition,
-                    !(contentsVisiblityArray?.get(adapterPosition)?:false))
+                contentsVisiblityArray?.set(bindingAdapterPosition,
+                    !(contentsVisiblityArray?.get(bindingAdapterPosition)?:false))
                 notifyDataSetChanged()
             }
             chapter_no_tv?.text = chapter.chapter_no
             title_tv?.text = chapter.title
 
-            if(contentsVisiblityArray?.get(adapterPosition)?:false) {
+            if(contentsVisiblityArray?.get(bindingAdapterPosition)?:false) {
                 val viewManager = LinearLayoutManager(itemView.context)
                 val viewAdapter = ContentAdapter(chapter.content!!)
 
@@ -133,7 +133,7 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
     }
 
     fun resetRows() {
-        contentsVisiblityArray = Array(65) {false}
+        contentsVisiblityArray = Array(dataSet.size) {false}
         notifyDataSetChanged()
     }
 }
