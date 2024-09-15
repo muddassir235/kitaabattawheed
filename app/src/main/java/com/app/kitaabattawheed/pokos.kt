@@ -1,6 +1,6 @@
 package com.app.kitaabattawheed
 
-data class Chapter(val chapter_no: String = "",
+data class Chapter(val chapterNo: String = "",
                    val title     : String = "",
                    val content   : Array<String>? = null) {
     override fun equals(other: Any?): Boolean {
@@ -9,7 +9,7 @@ data class Chapter(val chapter_no: String = "",
 
         other as Chapter
 
-        if (chapter_no != other.chapter_no) return false
+        if (chapterNo != other.chapterNo) return false
         if (title != other.title) return false
         if (content != null) {
             if (other.content == null) return false
@@ -20,7 +20,7 @@ data class Chapter(val chapter_no: String = "",
     }
 
     override fun hashCode(): Int {
-        var result = chapter_no.hashCode()
+        var result = chapterNo.hashCode()
         result = 31 * result + title.hashCode()
         result = 31 * result + (content?.contentHashCode() ?: 0)
         return result

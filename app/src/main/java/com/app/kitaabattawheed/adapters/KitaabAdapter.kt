@@ -20,61 +20,61 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
         private const val TYPE_END = 1
     }
 
-    var contentsVisiblityArray: Array<Boolean>? = Array(dataSet.size) { false }
+    var contentsVisibilityArray: Array<Boolean>? = Array(dataSet.size) { false }
 
     abstract class BaseViewHolder<T>(itemView: View) : RecyclerView.ViewHolder(itemView) {
         abstract fun bind(item: T)
     }
 
     inner class ChapterHolder(itemView: View) : BaseViewHolder<Chapter> (itemView) {
-        private var title_ll     : LinearLayout?  = null
-        private var chapter_no_tv: TextView?      = null
-        private var title_tv     : TextView?      = null
-        private var share_iv     : ImageView?     = null
-        private var content_rv   : RecyclerView?      = null
+        private var titleLl     : LinearLayout?  = null
+        private var chapterNoTv: TextView?      = null
+        private var titleTv     : TextView?      = null
+        private var shareIv     : ImageView?     = null
+        private var contentRv   : RecyclerView?      = null
 
         init {
-            title_ll      = itemView.findViewById(R.id.title_ll)
-            chapter_no_tv = itemView.findViewById(R.id.chapter_no_tv)
-            title_tv      = itemView.findViewById(R.id.title_tv)
-            share_iv      = itemView.findViewById(R.id.share_iv)
+            titleLl      = itemView.findViewById(R.id.title_ll)
+            chapterNoTv = itemView.findViewById(R.id.chapter_no_tv)
+            titleTv      = itemView.findViewById(R.id.title_tv)
+            shareIv      = itemView.findViewById(R.id.share_iv)
         }
 
         override fun bind(chapter: Chapter) {
-            title_ll?.setOnClickListener {
-                contentsVisiblityArray?.set(bindingAdapterPosition,
-                    !(contentsVisiblityArray?.get(bindingAdapterPosition)?:false))
+            titleLl?.setOnClickListener {
+                contentsVisibilityArray?.set(bindingAdapterPosition,
+                    !(contentsVisibilityArray?.get(bindingAdapterPosition)?:false))
                 notifyDataSetChanged()
             }
-            chapter_no_tv?.text = chapter.chapter_no
-            title_tv?.text = chapter.title
+            chapterNoTv?.text = chapter.chapterNo
+            titleTv?.text = chapter.title
 
-            if(contentsVisiblityArray?.get(bindingAdapterPosition)?:false) {
+            if(contentsVisibilityArray?.get(bindingAdapterPosition) == true) {
                 val viewManager = LinearLayoutManager(itemView.context)
                 val viewAdapter = ContentAdapter(chapter.content!!)
 
-                content_rv = itemView.findViewById<RecyclerView>(R.id.content_rv)
+                contentRv = itemView.findViewById<RecyclerView>(R.id.content_rv)
                     .apply {
                     setHasFixedSize(true)
                     layoutManager = viewManager
                     adapter = viewAdapter
                 }
 
-                content_rv?.visibility = View.VISIBLE
-                title_tv?.typeface = ResourcesCompat.getFont(itemView.context, R.font.tajawal_bold)
-                share_iv?.visibility = View.VISIBLE
+                contentRv?.visibility = View.VISIBLE
+                titleTv?.typeface = ResourcesCompat.getFont(itemView.context, R.font.tajawal_bold)
+                shareIv?.visibility = View.VISIBLE
             } else {
-                content_rv?.visibility = View.GONE
-                title_tv?.typeface = ResourcesCompat.getFont(itemView.context,
+                contentRv?.visibility = View.GONE
+                titleTv?.typeface = ResourcesCompat.getFont(itemView.context,
                     R.font.tajawal_medium)
-                share_iv?.visibility = View.GONE
+                shareIv?.visibility = View.GONE
             }
 
-            share_iv?.setOnClickListener {
+            shareIv?.setOnClickListener {
                 var text = ""
                 text = text +
                         "كتاب التوحيد الذي هو حق الله على العبيد صنفه الشيخ محمد بن عبد الوهاب رحمه الله" + "\n\n" +
-                        chapter.chapter_no + " " + chapter.title + "\n"
+                        chapter.chapterNo + " " + chapter.title + "\n"
 
                 for(row in chapter.content!!) {
                     text = text + "\n" + row
@@ -115,10 +115,10 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
     }
 
     override fun getItemViewType(position: Int): Int {
-        if(position == dataSet.size) {
-            return TYPE_END
+        return if(position == dataSet.size) {
+            TYPE_END
         } else {
-            return TYPE_CHAPTER
+            TYPE_CHAPTER
         }
     }
 
@@ -133,7 +133,7 @@ class KitaabAdapter(private val dataSet: Array<Chapter>) :
     }
 
     fun resetRows() {
-        contentsVisiblityArray = Array(dataSet.size) {false}
+        contentsVisibilityArray = Array(dataSet.size) {false}
         notifyDataSetChanged()
     }
 }
