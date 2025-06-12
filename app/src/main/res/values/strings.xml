@@ -740,9 +740,15 @@
     <string-array name="chapter1_en">
         <item>The saying of Allah, the Most High: (And I did not create the jinn and mankind except to worship Me.)</item>
         <item>And His saying: (And verily, We have sent among every Ummah (community, nation) a Messenger (proclaiming): "Worship Allâh (Alone), and avoid (or keep away from) Tâghût (all false deities i.e. do not worship Tâghût besides Allâh).")</item>
-        <item>✦ وقوله تعالى ﴿وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا…﴾ الآيه</item>
-        <item>✦ وقوله تعالى ﴿قُلْ تَعَالَوْا أَتْلُ مَا حَرَّمَ رَبُّكُمْ عَلَيْكُمْ أَلا تُشْرِكُوا بِهِ شَيْئًا وَبِالْوَالِدَيْنِ إِحْسَانًا…﴾ الآيه</item>
-        <item>✦ قال ابن مسعود رضي الله عنه : من أراد أن ينظر إلى وصيه محمدﷺ التي عليها خاتمه، فليقرأ قوله تعالى ﴿قُلْ تَعَالَوْا أَتْلُ مَا حَرَّمَ رَبُّكُمْ عَلَيْكُمْ أَلا تُشْرِكُوا بِهِ شَيْئًا وَبِالْوَالِدَيْنِ إِحْسَانًا…﴾الى قوله تعالى ﴿وَأَنَّ هَذَا صِرَاطِي مُسْتَقِيمًا …﴾ الآيه</item>
-        <item>✦ وعن معاذ بن جبل رضي الله عنه قال: كنت رديف النبيﷺ على حمار، فقال لي «يا معاذ ! أتدري ماحق الله على العباد، وما حق العباد على الله ؟ »  قلت الله و رسولهﷺ اعلم، قال «فإن حق الله على العباد: ان يعبدوه ولا يشركوا به شيئا، وحق العبادعلى الله: ان لا يعذب من لا يشرك به شيئا»  فقلت: يارسول الله! أفلا أبشر الناس؟ قال: «لاتبشرهم فيتكلوا» أخرجاه في الصحيحين</item>
+        <item>And Allah, the Exalted, said: "And your Lord has decreed that you worship none but Him and treat your parents with kindness..." (Qur’an 17:23).</item>
+        <item>And Allah, the Exalted, said: "Say: 'Come, I will recite what your Lord has forbidden to you: that you associate nothing with Him, and treat your parents with kindness...'" (Qur’an 6:151).</item>
+        <item>Ibn Mas\'ud (may Allah be pleased with him) said: Whoever wishes to see the will of Muhammad ﷺ which bears his seal, let him read the statement of Allah, the Exalted: "Say: 'Come, I will recite what your Lord has forbidden to you: that you associate nothing with Him, and treat your parents with kindness...'" up to His saying: "'And indeed, this is My straight path, so follow it...'" (Qur’an 6:151–153).</item>
+        <item>And Mu\'adh bin Jabal (may Allah be pleased with him) reported: I was riding behind the Prophet ﷺ on a donkey when he said to me, "O Mu'adh! Do you know what Allah’s right upon His servants is, and what the servants’ right upon Allah is?" I replied, "Allah and His Messenger know best." He said, "Allah’s right upon His servants is that they worship Him alone and do not associate anything with Him; and the servants’ right upon Allah is that He does not punish anyone who does not associate anything with Him." I said, "O Messenger of Allah! Shall I not inform the people of this?" He said, "Do not inform them, lest they rely on it." (Agreed upon by al-Bukhari and Muslim.)</item>
+    </string-array>
+
+    <string-array name="chapter2_en">
+        <item>And Allah the Most High said: "Those who have believed and not mixed their faith with injustice – for them there is security and they are rightly guided."</item>
+        <item>\'Ubadah bin As-Samit (may Allah be pleased with him) reported that the Messenger of Allah (ﷺ) said: "Whoever testifies that none has the right to be worshiped except Allah, alone without partner; and that Muhammad is His slave and Messenger; and that 'Isa (Jesus) is the slave of Allah and His Messenger, and His Word which He bestowed upon Maryam (Mary) and a spirit from Him; and that Paradise is true and Hell is true – Allah will admit him into Paradise, whatever his deeds might be." (Agreed upon)</item>
+        <item>It is also narrated in the hadith of \'Itban (collected by Al-Bukhari and Muslim) that the Prophet (ﷺ) said: "Indeed, Allah has forbidden Hellfire for the one who says: 'None has the right to be worshiped except Allah,' desiring by it nothing but the Face of Allah."</item>
     </string-array>
 </resources>
